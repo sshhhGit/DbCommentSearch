@@ -36,6 +36,9 @@ import java.util.Locale;
  */
 public final class DbCommentSearchContributor implements WeightedSearchEverywhereContributor<DbCommentItem> {
 
+    /** Search Everywhere 탭 ID. {@link OpenDbCommentSearchAction}에서 이 탭을 바로 열 때 사용. */
+    public static final String PROVIDER_ID = "DbCommentSearch";
+
     private static final int MAX_RESULTS = 300;
 
     private final Project project;
@@ -48,7 +51,7 @@ public final class DbCommentSearchContributor implements WeightedSearchEverywher
 
     @Override
     public @NotNull String getSearchProviderId() {
-        return "DbCommentSearch";
+        return PROVIDER_ID;
     }
 
     @Override

@@ -27,6 +27,9 @@
       <li>Type part of a comment</li>
       <li>Press <kbd>Enter</kbd> to jump to the table or column</li>
     </ol>
+    <p>To open the DB Comment tab directly, use <i>Navigate | Search DB Comment...</i> and assign your own shortcut
+    in <i>Settings | Keymap</i> (search for &quot;Search DB Comment&quot;). Text selected in the editor becomes the
+    initial query.</p>
 
     <h3>Notes</h3>
     <ul>
@@ -42,10 +45,19 @@
     <p>Search Everywhere(<kbd>Shift</kbd> 두 번)에 <b>DB Comment</b> 탭을 추가합니다.
     Database 도구 창에 연결된 데이터 소스의 테이블·뷰·컬럼을 <b>comment(한글 포함)</b>로 검색하고,
     선택하면 해당 객체로 이동합니다. 공백으로 구분한 여러 단어는 모두 포함된 항목만 표시합니다.
+    <i>Navigate | Search DB Comment...</i> 에 단축키(Settings | Keymap)를 지정하면 DB Comment 탭으로 바로 열 수 있고,
+    에디터에서 선택한 텍스트가 검색어로 채워집니다.
     comment가 검색되지 않으면 데이터 소스를 Refresh 하세요.</p>
     ]]></description>
 
     <change-notes><![CDATA[
+    <h3>1.1.0</h3>
+    <ul>
+      <li>New action <b>Search DB Comment...</b> (<i>Navigate</i> menu) that opens Search Everywhere directly on the
+      <b>DB Comment</b> tab. Assign any shortcut in <i>Settings | Keymap</i>.</li>
+      <li>If text is selected in the editor, it is used as the initial search query.</li>
+      <li>If Search Everywhere is already open, the action switches to the DB Comment tab.</li>
+    </ul>
     <h3>1.0.0</h3>
     <ul>
       <li>Initial release: <b>DB Comment</b> tab in Search Everywhere</li>
@@ -62,4 +74,14 @@
         <searchEverywhereContributor
                 implementation="com.sshhhdev.dbcommentsearch.DbCommentSearchContributor$Factory"/>
     </extensions>
+
+    <actions>
+        <!-- 기본 단축키 없음: Settings | Keymap 에서 "Search DB Comment" 로 직접 지정 -->
+        <action id="com.sshhhdev.dbcommentsearch.OpenDbCommentSearch"
+                class="com.sshhhdev.dbcommentsearch.OpenDbCommentSearchAction"
+                text="Search DB Comment..."
+                description="Open Search Everywhere on the DB Comment tab (search database objects by comment)">
+            <add-to-group group-id="GoToTargetEx" anchor="last"/>
+        </action>
+    </actions>
 </idea-plugin>

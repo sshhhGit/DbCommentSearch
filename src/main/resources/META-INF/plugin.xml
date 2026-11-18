@@ -1,0 +1,65 @@
+<idea-plugin>
+    <id>com.sshhhdev.dbcommentsearch</id>
+    <name>DB Comment Search</name>
+    <vendor>sshhhdev</vendor>
+
+    <description><![CDATA[
+    <p>Adds a <b>DB Comment</b> tab to <b>Search Everywhere</b> (double <kbd>Shift</kbd>) that finds
+    database tables, views and columns by their <b>comments</b> &mdash; something the built-in
+    <i>Go to Database Object</i> cannot do, because it matches object names only.</p>
+
+    <p>Very useful when your schema uses short or abbreviated object names and the real meaning lives in
+    the comments (for example, comments written in Korean, Japanese or Chinese).</p>
+
+    <h3>Features</h3>
+    <ul>
+      <li>Searches comments of tables, views and columns in every data source of the Database tool window</li>
+      <li>Works with any language, including non-Latin text such as Korean (한글)</li>
+      <li>Space-separated words are AND-matched, e.g. <code>change request</code></li>
+      <li>Results are ranked: exact comment &gt; comment starts with &gt; comment contains &gt; name match</li>
+      <li>Each result shows the object name, its comment and the data source / schema</li>
+      <li>Selecting a result navigates to the object in the Database tool window</li>
+    </ul>
+
+    <h3>Usage</h3>
+    <ol>
+      <li>Press <kbd>Shift</kbd> twice and switch to the <b>DB Comment</b> tab (<kbd>Tab</kbd>)</li>
+      <li>Type part of a comment</li>
+      <li>Press <kbd>Enter</kbd> to jump to the table or column</li>
+    </ol>
+
+    <h3>Notes</h3>
+    <ul>
+      <li>Requires the bundled <b>Database Tools and SQL</b> plugin (IntelliJ IDEA Ultimate, DataGrip and other
+      paid JetBrains IDEs).</li>
+      <li>Comments are read from the IDE's introspected metadata, not queried live. If nothing is found, make sure
+      the data source introspection level includes comments and refresh the data source (<kbd>Ctrl+F5</kbd>).</li>
+    </ul>
+
+    <hr/>
+
+    <p><b>한국어</b></p>
+    <p>Search Everywhere(<kbd>Shift</kbd> 두 번)에 <b>DB Comment</b> 탭을 추가합니다.
+    Database 도구 창에 연결된 데이터 소스의 테이블·뷰·컬럼을 <b>comment(한글 포함)</b>로 검색하고,
+    선택하면 해당 객체로 이동합니다. 공백으로 구분한 여러 단어는 모두 포함된 항목만 표시합니다.
+    comment가 검색되지 않으면 데이터 소스를 Refresh 하세요.</p>
+    ]]></description>
+
+    <change-notes><![CDATA[
+    <h3>1.0.0</h3>
+    <ul>
+      <li>Initial release: <b>DB Comment</b> tab in Search Everywhere</li>
+      <li>Search tables, views and columns by comment (any language) or name</li>
+      <li>Multi-word AND matching and ranked results</li>
+      <li>Navigate to the selected object in the Database tool window</li>
+    </ul>
+    ]]></change-notes>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.database</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <searchEverywhereContributor
+                implementation="com.sshhhdev.dbcommentsearch.DbCommentSearchContributor$Factory"/>
+    </extensions>
+</idea-plugin>

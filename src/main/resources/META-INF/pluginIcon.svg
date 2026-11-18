@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <!-- database cylinder -->
+  <path d="M4 9v18c0 2.8 5.4 5 12 5s12-2.2 12-5V9" fill="#3574F0"/>
+  <ellipse cx="16" cy="9" rx="12" ry="5" fill="#5A8FF5"/>
+  <path d="M4 15c0 2.8 5.4 5 12 5s12-2.2 12-5M4 21c0 2.8 5.4 5 12 5s12-2.2 12-5" fill="none" stroke="#FFFFFF" stroke-opacity="0.55" stroke-width="1.5"/>
+  <!-- comment bubble -->
+  <path d="M20 19h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-8l-4 4v-4h-4a2 2 0 0 1-2-2V21a2 2 0 0 1 2-2z" fill="#F2A33A"/>
+  <path d="M23 24h10M23 28h7" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+</svg>

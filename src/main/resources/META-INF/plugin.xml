@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.sshhhdev.dbcommentsearch</id>
     <name>DB Comment Search</name>
-    <vendor>sshhhdev</vendor>
+    <vendor url="https://github.com/sshhhGit/DbCommentSearch">sshhhdev</vendor>
 
     <description><![CDATA[
     <p>Adds a <b>DB Comment</b> tab to <b>Search Everywhere</b> (double <kbd>Shift</kbd>) that finds

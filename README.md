@@ -42,6 +42,10 @@ Change these paths to match your machine.
 Search Everywhere(`Shift` 두 번)에 **DB Comment** 탭을 추가해, 테이블·뷰·컬럼을 **comment(한글 포함)** 로 검색하고
 선택하면 Database 도구 창의 해당 객체로 이동합니다. 공백으로 구분한 여러 단어는 모두 포함된 항목만 표시합니다.
 
+## Feedback
+
+Bug reports and feature requests: [GitHub Issues](https://github.com/sshhhGit/DbCommentSearch/issues)
+
 ## License
 
 [MIT](LICENSE)

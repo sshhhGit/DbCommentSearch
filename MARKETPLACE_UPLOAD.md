@@ -10,7 +10,7 @@
 | **Plugin file** | `build/distributions/DbCommentSearch-1.0.0.zip` |
 | **License** | `MIT License` 선택 (또는 소스 저장소의 LICENSE URL) |
 | **Tags** | `Database`, `Search`, `Navigation` |
-| **Source code URL** | (선택) GitHub 저장소 URL — 올렸다면 입력 |
+| **Source code URL** | `https://github.com/sshhhGit/DbCommentSearch` |
 | **Channel** | `Stable` (기본값) |
 | **Hide until approved / visibility** | 공개로 두면 승인 직후 공개됨 |
 
@@ -21,6 +21,7 @@
 | 항목 | 값 |
 |---|---|
 | Plugin ID | `com.sshhhdev.dbcommentsearch` (한 번 올리면 변경 불가) |
+| Vendor | `sshhhdev` (url: `https://github.com/sshhhGit/DbCommentSearch`) |
 | Name | `DB Comment Search` |
 | Version | `1.0.0` |
 | Compatibility | build 253+ (2025.3 이상), 상한 없음 |
@@ -33,7 +34,8 @@
 | 항목 | 내용 |
 |---|---|
 | **Screenshots** | `Shift` 두 번 → DB Comment 탭에서 한글 comment 검색 결과 화면. 회사 테이블명·스키마가 보이지 않는 샘플 DB로 캡처 |
-| **Issue tracker / Website** | GitHub 저장소의 Issues URL |
+| **Issue tracker** | `https://github.com/sshhhGit/DbCommentSearch/issues` |
+| **Website** | `https://github.com/sshhhGit/DbCommentSearch` (plugin.xml vendor url로도 들어가 있음) |
 | **Contact (vendor email)** | vendor 프로필에서 입력. `plugin.xml`에는 넣지 않았음 |
 
 ## 4. 올리기 전 체크리스트
